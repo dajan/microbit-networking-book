@@ -1,4 +1,4 @@
-Remerciement
+Remerciements
 ================
 
 Nous avons pu bénéficier de l'aide d'un grand nombre de personnes pour créer ce livre.
