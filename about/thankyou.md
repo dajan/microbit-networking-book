@@ -1,12 +1,12 @@
-Acknowledgements
+Remerciement
 ================
 
-We have got a lot of help from various people when creating this book. 
+Nous avons pu bénéficier de l'aide d'un grand nombre de personnes pour créer ce livre.
 
-Thank you to the BBC and creators of the micro:bit, and to Zach Shelby and Jonny Austin of the Micro:bit Foundation for your support.
+Merci à la BBC et aux créateurs du projet micro:bit, et à Zach Shelby et Jonny Austin de la fondation Micro:bit pour leur aide et support.
 
-Thank you to David Whale ([@whaleygeek](https://twitter.com/whaleygeek)) for all your help and inspiration.
+Merci à David Whale ([@whaleygeek](https://twitter.com/whaleygeek)) pour son aide et son inspiration.
 
-Thank you to James Burgin and Anna Adolphson at Nominet, for help with the videos and graphical layout, and Alistair Braden for review & suggestions.
+Merci à James Burgin et Anna Adolphson chez Nominet, pour leur aide sur les vidéos et les éléments graphiques, et Alistair Braden pour la relecture et ses suggestions.
 
-Special thanks to Adam Leach, director of our research team at Nominet, for giving us the opportunity to work on this.
+Un merci particulier à Adam Leach, directeur de notre group de recherche à Nominet, pour nous avoir donné l'opportunité de travailler sur ce projet.
