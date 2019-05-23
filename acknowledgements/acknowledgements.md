@@ -1,4 +1,4 @@
-Handling Errors: Acknowledgements
+Gérer les erreurs : Les accusés de réception
 =================================
 
 ![Chapter 9 image](chapter9.png)
@@ -6,43 +6,44 @@ Handling Errors: Acknowledgements
 Introduction
 ------------
 
-In the previous chapter, you used retransmissions to deal with transmission errors. In this chapter, you will improve on this by using acknowledgements. Doing this activity, you will learn
-several key methods and protocols for error control in networking.
+Dans le chapitre précédent, vous avez utilisé la retransmission pour gérer les erreurs de transmission. Dans ce chapitre, vous allez améliorer vos méthodes de gestion de ces problèmes en utilisant les accusés de réception. Dans le cadre de cette activité, vous apprendrez plusieurs méthodes pertinentes pour gérer le contrôle des erreurs de transmission au sein d'un réseau.
 
-In summary, you will learn:
+En résumé vous apprendrez :
 
-- The concept of *acknowledgements*
+- Le concept des *accusés de réception*
 
-- The concept of *Automatic Repeat Request (ARQ)*
+- Le concept des requêtes automatiques de répétition ou *Automatic Repeat Request (ARQ)*
 
-- The *Stop-and-Wait protocol*
+- Le protocol *Stop-and-Wait protocol ARQ*
 
-### What you’ll need
+### Vous avez besoin de
 
     2 micro:bits
-    1 teammate
+    1 camarade
 
-Background
+Contexte
 ----------
 
-In the previous chapter, a message was transmitted multiple times no
-matter if the receiver already received an earlier copy. This is
-wasteful! You could have been transmitting new information instead of
-repeating yourself. This is also wasteful for the receiver, which needs to
-keep discarding the duplicates.
+Dans le chapitre précédent, un message était transmis plusieurs fois même
+si le destinataire avait déjà reçu le message précédemment. Ceci gâche la bande passante
+pour rien ! Vous auriez pu envoyer de nouvelles informations à la place de vous
+répétez. C'est aussi une perte de temps pour le destinataire qui doit
+systématiquement supprimer tous les doublons.
 
-To avoid this, we will introduce a new concept called
-*acknowledgements*.
+Pour éviter cela, nous allons introduire un nouveau concept appelé
+*accusé de réception*.
 
-!!! hint "Definition 1: _Acknowledgement (ACK)_"
-	Acknowledgements are small messages that the receiver sends back, to tell the sender it received a message. The sender then knows it doesn't need to retransmit, and is ready to send the next message. 
+!!! « Définition 1 : _Accusé de récecption (ACC)_ ou _Acknowledgement (ACK)_ »
+	Les accusés de réception sont de brefs messages que le récepteur renvoie à l'expéditeur pour lui signifier
+	qu'il a reçu le message. L'expéditeur sait alors qu'il n'a pas besoin de transmettre le message à nouveau et
+	peut alors passer à l'envoi d'un nouveau message.
 	
-If the sender does not receive an acknowledgment, only then it should retransmit its message.
+Le message n'est renvoyé que si l'expéditeur ne reçoit pas un accusé de réception.
 
-But how long should the sender wait an acknowledgement? This is
-determined by a *timeout*.
+La question est alors de savoir combien de temps l'expéditeur doit attendre pour cet accusé de réception ?
+Cette information est déterminée par un délai de *temporisation*.
 
-!!! hint "Definition 2: _Timeout_"
+!!! « Définition 2: _Temporisation_ ou _Timeout_ »
 	A timeout is the amount of time allowed to pass
 	before the sender gives up waiting for an acknowledgement.
 
